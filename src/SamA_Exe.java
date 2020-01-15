@@ -24,13 +24,20 @@ public class SamA_Exe extends JFrame {
 			}
 		});
 		SamA_Raw_Material test = new SamA_Raw_Material();
-		test.read_Material("test.XLS");
+		SamA_Order test1 = new SamA_Order();
 		
-		for(int i = 0; i < test.production_code.size(); i++) {
-			System.out.println("production code :" + test.production_code.get(i));
-			System.out.println("production date :" + test.production_date.get(i));
-			
-		}
+		test.read_Material("material.xls");
+		test1.read_Order("order.xls");
+		
+//		for(int i = 0; i < test.production_code.size(); i++) {
+//			System.out.println("production code :" + test1.production_code.get(i));
+//			//System.out.println("production date :" + test1.alloy2.get(i));		
+//		}
+//		
+//		for(int i = 0; i < test1.production_code.size(); i++) {
+//			System.out.println("production code :" + test1.production_code.get(i));
+//			//System.out.println("production date :" + test1.alloy2.get(i));		
+//		}
 	}
 
 	/**

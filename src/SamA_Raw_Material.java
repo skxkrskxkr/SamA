@@ -50,6 +50,9 @@ public class SamA_Raw_Material {
 				if(row_cur != null) { //not end of file
 					int col_number = row_cur.getPhysicalNumberOfCells(); //check col count
 					
+					if(row_cur.getCell(0).getCellType() == HSSFCell.CELL_TYPE_BLANK) { //line end
+						break;
+					}
 					for(int col_index = 0; col_index < col_number; col_index++) {
 						HSSFCell col_cur = row_cur.getCell(col_index);
 						String temp = "";
@@ -82,8 +85,8 @@ public class SamA_Raw_Material {
 							break;
 						}
 						//System.out.println(row_index + "번 행 : " + col_index + "번 열 값은: " + temp);
-						System.out.println(col_index);
-						System.out.println(temp);
+//						System.out.println(col_index);
+//						System.out.println(temp);
 
 						switch(col_index) {
 						   case 0: //production code
